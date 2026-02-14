@@ -28,3 +28,4 @@ links.forEach(link => {
         sidebar.classList.remove("active");
     });
 });
+
