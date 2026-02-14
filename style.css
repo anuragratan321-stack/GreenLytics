@@ -370,8 +370,8 @@ footer{
         display: flex;
     }
     .img-grid{
-        width: 95%;
-        gap: 5px;
+        width: 100%;
+        gap: 0px;
     }
     .loginCard{
         width: 280px;
