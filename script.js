@@ -5,8 +5,10 @@ const signin = document.getElementById("signIn");
 const overlay = document.querySelector(".overlay");
 const loginCard = document.querySelector(".loginCard");
 const signinDesktop = document.getElementById("signInDesktop");
+const getStarted = document.getElementById("getStarted");
 
 signinDesktop.addEventListener("click", toggleLogin);
+getStarted.addEventListener("click", toggleLogin);
 hamburger.addEventListener("click", toggleMenu);
 signin.addEventListener("click", toggleLogin);
 overlay.addEventListener("click", toggleLogin);
