@@ -6,8 +6,8 @@ const overlay = document.querySelector(".overlay");
 const loginCard = document.querySelector(".loginCard");
 const signinDesktop = document.getElementById("signInDesktop");
 const getStarted = document.getElementById("getStarted");
-const themeButton = document.getElementById("theme_button");
 const changeTheme = document.getElementById("changeTheme");
+const themeButton = document.getElementById("theme_button");
 
 signinDesktop.addEventListener("click", toggleLogin);
 getStarted.addEventListener("click", toggleLogin);
