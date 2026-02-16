@@ -1,9 +1,36 @@
+/* light theme  */
+:root{
+  --base-clr: white;
+  --line-clr: #42434a;
+  --hover-clr: rgba(245, 245, 245, 0.8);
+  --text-clr: black;
+  --accent-clr: rgb(30, 29, 29);
+  --secondary-text-clr: #b0b3c1;
+  --shadow-clr: rgb(64, 64, 64,0.5);
+  --overlay-clr: rgb(64, 64, 64,0.5);
+} 
+
+/* dark theme */
+
+body.dark-theme{
+  --base-clr: black;
+  --line-clr: #42434a;
+  --hover-clr: #222533;
+  --text-clr: white;
+  --accent-clr: rgb(30, 29, 29);
+  --secondary-text-clr: #b0b3c1;
+  --shadow-clr: rgba(202, 202, 202, 0.5);
+}
+
 *{
     margin: 0;
     padding: 0;
 }
 body{
     font-family: poppins;
+    background-color: var(--base-clr);
+    color: var(--text-clr);
+    
 }
 html{
     scroll-behavior: smooth;
@@ -18,7 +45,7 @@ html{
     top: 0;
     width: 100%;
     backdrop-filter: blur(10px);
-    background-color: rgba(255, 255, 255, 0.504);
+    background-color: var(--base-clr);
     z-index: 1000;
 }
 
@@ -49,19 +76,23 @@ html{
     list-style: none;
     margin-right: 3rem;
 }
+li{
+    display: flex;
+    align-items: center;
+}
 .navlist li a{
     position: relative;
     text-decoration: none;
-    color: black;
+    color: var(--text-clr);
 }
 .navlist li a:hover{
-    color: black;
+    color: var(--text-clr);
 }
 
 .navlist li a::after{
     content: "";
     position: absolute;
-    background-color: rgb(0, 0, 0);
+    background-color: var(--text-clr);
     height: 2px;
     bottom: 0px;
     left: 0;
@@ -80,7 +111,7 @@ html{
     top: 0;
     right: -250px;
     width: 250px;
-    background-color: rgba(255, 255, 255);
+    background-color: var(--base-clr);
     list-style: none;
     z-index: 999;
     backdrop-filter: blur(50px);
@@ -94,12 +125,12 @@ html{
     display: flex;
     align-items: center;
     text-decoration: none;
-    color: black;
+    color: var(--text-clr);
     height: 4rem;
     padding: 0 20px;
 }
-.sidebar li a:hover{
-    background-color: rgba(245, 245, 245, 0.8);
+.sidebar li:hover{
+    background-color: var(--hover-clr);
 }
 
 main{
@@ -108,16 +139,30 @@ main{
 p{
     margin: 2rem 5rem;
 }
+svg{
+    fill: var(--text-clr);
+    margin: 10px;
+}
+.sliderButtons button{
+    background-color: transparent;
+    border: none;
+}
+
 .overlay{
     display: none;
     position: fixed;
     backdrop-filter: blur(10px);
     inset: 0;
     z-index: 998;
-    background-color: rgba(206, 206, 206, 0.5);
+    background-color: var(--overlay-clr);
 }
 .overlay.active{
     display: block;
+}
+.navlist svg:hover{
+    fill: rgb(255, 230, 0);
+    transition: 0.3s;
+    cursor: pointer;
 }
 
 .title-container{
@@ -127,11 +172,11 @@ p{
     gap: 1rem;
     background-image: url(https://wallpapercave.com/wp/wp5861940.jpg);
     background-size: cover;
-    color: white;
-    text-shadow: 0 0 10px black;
+    color: var(--base-clr);
+    text-shadow: 0 0 10px var(--base-clr);
     padding: 1rem 3rem;
     border-radius: 15px;
-    box-shadow: 0 0 10px black;
+    box-shadow: 0 0 10px var(--base-clr);
     position: relative;
 }
 /* .title-overlay{
@@ -163,8 +208,8 @@ section{
     text-align: center;
 }
 .getStarted{
-    background-color: black;
-    color: white;
+    background-color: var(--text-clr);
+    color: var(--base-clr);
     font-family: poppins;
     font-size: 1.3rem;
     padding: 5px 20px;
@@ -209,6 +254,7 @@ hr{
     box-shadow: 0 0 10px rgb(64, 64, 64,0.5);
     border-radius: 15px;
     background-size: cover;
+    transition: opacity 0.2s ease-in-out;
 }
 #img1{
     background-image: url(https://i.pinimg.com/1200x/b8/37/b5/b837b5c6489df23eddb9de1f871d8e4b.jpg);
@@ -225,7 +271,7 @@ hr{
 }
 
 footer{
-    background-color: rgb(30, 29, 29);
+    background-color: var(--accent-clr);
     color: white;
     height: 25rem;
     display: flex;
@@ -244,7 +290,7 @@ footer{
   transform: translate(-50%,-50%);
   flex-direction: column;
   gap: 10px;
-  background-color: #ffffff;
+  background-color: white;
   padding: 30px;
   width: 350px;
   border-radius: 20px;
@@ -394,6 +440,6 @@ footer{
     border-radius: 50%;
 }
 .sliderButtons svg{
-    fill: rgb(100, 100, 100);
+    fill: var(--text-clr);
 }
     
